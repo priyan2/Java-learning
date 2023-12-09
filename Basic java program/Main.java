@@ -1,6 +1,6 @@
 import java.util.*;
-//1.Area of a circle
 
+//1.Area of a circle
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -12,7 +12,6 @@ public class Main {
 }
 
 //2.Area of triangle
-
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -26,7 +25,6 @@ public class Main {
 }
 
 //3.Area of rectangle
-
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -40,7 +38,6 @@ public class Main {
 }
 
 //4.Area Of Isosceles Triangle
-
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -67,7 +64,6 @@ public class Main {
 }
 
 //6.Area of Rhombus
-
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -307,7 +303,6 @@ public class Main {
 }
 
 //24.Take integer inputs till the user enters 0 and print the sum of all numbers
-
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
