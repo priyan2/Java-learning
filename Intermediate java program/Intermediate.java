@@ -60,6 +60,7 @@ public class Intermediate {
         System.out.println("Average is "+ sum / number);
     }
 }
+
 //4.Calculate Discount Of Product
 public class Intermediate {
     public static void main(String[] args) {
@@ -74,6 +75,7 @@ public class Intermediate {
 
     }
 }
+
 //5.Calculate Distance Between Two Points
 public class Intermediate {
     public static void main(String[] args) {
@@ -90,6 +92,7 @@ public class Intermediate {
         System.out.println(distanceBtwPoints);
     }
 }
+
 //6.Calculate Commission Percentage
 public class Intermediate {
     public static void main(String[] args) {
