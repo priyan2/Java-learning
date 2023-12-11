@@ -1,7 +1,6 @@
 import java.util.*;
 
 //1.Factorial Program In Java
-
 public class Intermediate {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -61,7 +60,6 @@ public class Intermediate {
         System.out.println("Average is "+ sum / number);
     }
 }
-
 //4.Calculate Discount Of Product
 public class Intermediate {
     public static void main(String[] args) {
@@ -76,7 +74,6 @@ public class Intermediate {
 
     }
 }
-
 //5.Calculate Distance Between Two Points
 public class Intermediate {
     public static void main(String[] args) {
@@ -93,7 +90,6 @@ public class Intermediate {
         System.out.println(distanceBtwPoints);
     }
 }
-
 //6.Calculate Commission Percentage
 public class Intermediate {
     public static void main(String[] args) {
@@ -121,7 +117,6 @@ public class intermediate {
         }
         system.out.println(result);
     }
-
 
 //8.Calculate Depreciation of Value
 public class Intermediate {
@@ -246,6 +241,63 @@ public class Intermediate {
         }
         else{
             System.out.println("The given number is not armstrong");
+        }
+    }
+}
+//15.Find Ncr & Npr
+public class Intermediate {
+    static long factorial(int number){
+        long sum = 1;
+        for(int i = 1 ; i <= number ; i++){
+            sum = sum * i;
+        }
+        return sum;
+    }
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the value of n : ");
+        int n = in.nextInt();
+        System.out.println("Enter the value of r : ");
+        int r = in.nextInt();
+        long permutation = factorial(n) / factorial(n-r);
+        long combination = factorial(n) / (factorial(r) * factorial(n-r));
+        System.out.println("Permutation is : "+permutation);
+        System.out.println("Combination is : "+combination);
+    }
+}
+
+//16.Reverse A String In Java
+public class Intermediate {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the name : ");
+        String name = in.nextLine();
+        String reverseName = "";
+        for(int i = name.length()-1; i >= 0; i--){
+            reverseName = reverseName+name.charAt(i);
+        }
+        System.out.println("Reversed string is: "+reverseName);
+    }
+}
+
+//17.Find if a number is palindrome or not
+public class Intermediate {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the number : ");
+        int number =  in.nextInt();
+        int originalNumber = number;
+        int answer = 0;
+        while(number != 0){
+            int remainder = number % 10;
+            answer = answer * 10 + remainder;
+            number = number / 10;
+        }
+        if(answer == originalNumber) {
+            System.out.println("The given number is palindrome");
+        }
+        else{
+            System.out.println("The given number is not palindrome");
         }
     }
 }
