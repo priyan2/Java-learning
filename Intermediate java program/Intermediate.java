@@ -301,3 +301,168 @@ public class Intermediate {
         }
     }
 }
+
+18.Future Investment Value
+public class Intermediate {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the present value : ");
+        int value =  in.nextInt();
+        System.out.println("Enter the rate of percentage : ");
+        int rateOfInterest =  in.nextInt();
+        System.out.println("Enter the number of years : ");
+        int year =  in.nextInt();
+        System.out.println("Future value is : ");
+        double futureValue = value * Math.pow((1+rateOfInterest),year);
+        System.out.println(futureValue);
+    }
+}
+
+19.HCF Of Two Numbers
+public class Intermediate {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the first number : ");
+        int num1 =  in.nextInt();
+        System.out.println("Enter the second number : ");
+        int num2 =  in.nextInt();
+        int hcf = 0;
+        int number = Math.min(num1,num2);
+        for(int i = 2; i <= number; i++){
+            if((num1 % i == 0) && (num2 % i == 0)){
+                hcf = i;
+            }
+        }
+        System.out.println("HCF is : "+hcf);
+    }
+}
+
+20.LCM Of Two Numbers
+public class Intermediate {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the first number : ");
+        int num1 =  in.nextInt();
+        System.out.println("Enter the second number : ");
+        int num2 =  in.nextInt();
+        int hcf = 0;
+        int number = Math.min(num1,num2);
+        for(int i = 2; i <= number; i++) {
+            if ((num1 % i == 0) && (num2 % i == 0)) {
+                hcf = i;
+            }
+        }
+        int lcm = (num1*num2)/hcf;
+        System.out.println("LCM is : "+lcm);
+    }
+}
+
+21.Java Program Vowel Or Consonant
+public class Intermediate {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the letter : ");
+        char character = in.next().charAt(0);
+        if(character == 'A' || character == 'E'|| character == 'I' || character == 'O' || character == 'U' ||
+                character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u'){
+            System.out.println("Vowel letter");
+        }
+        else{
+            System.out.println("Not a vowel letter");
+        }
+    }
+}
+
+22.Perfect Number In Java
+public class Intermediate {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the number: ");
+        int number = in.nextInt();
+        int sum  = 0;
+        for(int i = 1; i <= number/2; i++){
+            if((number % i ) == 0){
+                sum = sum + i;
+            }
+        }
+        if(number == sum){
+            System.out.println("The number is perfect number");
+        }
+        else{
+            System.out.println("Not a perfect number");
+        }
+    }
+}
+
+23.Check Leap Year Or Not
+public class Intermediate {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the year : ");
+        int year = in.nextInt();
+        if(year % 4 == 0){
+            System.out.println("Leap year");
+        }
+        else{
+            System.out.println("Not a leap year");
+        }
+    }
+}
+
+24.Sum Of A Digits Of Number
+public class Intermediate {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the number : ");
+        int number = in.nextInt();
+        int sum = 0;
+        while(number != 0){
+            int remainder = number % 10;
+            sum = sum + remainder;
+            number = number / 10;
+        }
+        System.out.println("Sum of digit is : "+sum);
+    }
+}
+
+25.Kunal is allowed to go out with his friends only on the even days of a given month. Write a program to count the number of days he can go out in the month of August.
+public class Intermediate {
+    public static void main(String[] args) {
+        int augustMonth = 31;
+        int count = 0;
+        for(int i = 1; i <= augustMonth; i++){
+            if(i%2==0){
+                count++;
+            }
+        }
+        System.out.println(count + " days");
+    }
+}
+//26.Write a program to print the sum of negative numbers, sum of positive even numbers and the sum of positive odd numbers from a list of numbers (N) entered by the user. The list terminates when the user enters a zero.
+public class Intermediate {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int number = 1;
+        int negativeSum = 0,positiveSumOdd = 0,positiveSumEven = 0;
+        System.out.println("Enter the number : ");
+        while(number != 0){
+
+            number = in.nextInt();
+
+            if(number < 0){
+                negativeSum = negativeSum - number;
+            }
+
+            if((number > 0) && (number % 2 == 0)){
+                positiveSumEven = positiveSumEven + number;
+            }
+            if((number > 0) && (number % 2 != 0)){
+                positiveSumOdd = positiveSumOdd + number;
+            }
+        }
+        System.out.println("Sum of negative numbers "+ negativeSum);
+        System.out.println("Sum of positive even numbers "+ positiveSumEven);
+        System.out.println("Sum of positive odd numbers "+ positiveSumOdd);
+
+    }
+}
