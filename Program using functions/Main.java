@@ -231,3 +231,74 @@ public class Main {
         System.out.println(isPalindrome(num));
     }
 }
+
+11.Write a function that returns the sum of first n natural numbers.
+public class Main {
+    static int sumOfNumbers(int num){
+        int sum = 0;
+        for(int i = 1; i <= num; i++){
+            sum = sum + i;
+        }
+        return sum;
+    }
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the number : ");
+        int num = in.nextInt();
+        System.out.println("Sum of given number is "+sumOfNumbers(num));
+    }
+}
+
+12.Write a function to check if a given triplet is a Pythagorean triplet or not.
+ (A Pythagorean triplet is when the sum of the square of two numbers is equal to the square of the third number).
+public class Main {
+    static String triplet(int num1,int num2,int num3){
+        double ans = Math.pow(num1,2) + Math.pow(num2,2);
+        if(ans == (Math.pow(num3,2))){
+            return "Pythagorean triplet";
+        }
+        return "Not a pythagorean triplet";
+    }
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the value of side 1 : ");
+        int num1 = in.nextInt();
+        System.out.println("Enter the value of side 2 : ");
+        int num2 = in.nextInt();
+        System.out.println("Enter the value of side 3: ");
+        int num3 = in.nextInt();
+        System.out.println(triplet(num1,num2,num3));
+    }
+}
+
+//13.Write a function that returns all prime numbers between two given numbers.
+public class Main {
+    static boolean isPrime(int num){
+        if(num <= 1){
+            return false;
+        }
+        for(int i = 2; i <= num/2; i++){
+            if(num % i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    static void primeNumbers(int num1,int num2){
+        for(int i = num1; i <= num2; i++){
+            if(isPrime(i)){
+                System.out.print(i + " ");
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the value : ");
+        int num1 = in.nextInt();
+        System.out.println("Enter the value : ");
+        int num2 = in.nextInt();
+        primeNumbers(num1,num2);
+    }
+}
